@@ -1,0 +1,115 @@
+@mixin flexCenter($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+};
+
+#tsparticles {
+    height: 100vh;
+    width: 100%;
+    // max-width: fit-content;
+    display: absolute;
+    top: 60px
+}
+
+.flex-container {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    pointer-events: none;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    transition: all 0.4s ease;
+    margin-bottom: 25px;
+    pointer-events: all;
+}
+
+.hello-div {
+    width: 550px;
+    @include flexCenter(row, space-around);
+    margin-bottom: 15px;
+}
+
+.header__intro{
+    font-size: 45px;
+}
+
+.header__name {
+    color: #cc1f78;
+    font-size: 45px;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+
+
+.header:hover {
+    transform: scale(1.03);
+}
+/* 
+.header__name:hover {
+    transform: scale(1.05) translateY(-4px);
+    font-weight: 800;
+    text-shadow: 0 1px #c43b92, 
+                1px 0 #da49a5, 
+                1px 2px #dd5aad, 
+                2px 1px #e470ba, 
+                2px 3px #e47ebe, 
+                3px 2px #e49eca, 
+                3px 4px #f1b2da;
+} */
+
+.header-button {
+    pointer-events: all;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 250px;
+    height: 65px;
+    outline: none;
+    border: 3px solid #fff;
+    background-color: transparent;
+    color: white;
+    font-size: 23px;
+    @include flexCenter(row, space-around);
+    transition: all 0.4s ease-in-out;
+}
+
+.header-button-arrow {
+    height: 23px;
+    width: 23px;
+    font-size: 23px;
+    transition: all 0.4s ease-in-out;
+}
+
+.header-button:hover {
+    transform: scale(1.02);
+    background-color: rgb(22, 174, 225);
+    border: 3px solid rgb(22, 174, 225);
+    outline: none;
+}
+
+.header-button:hover > .header-button-arrow {
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 764px) {
+    .header {
+        transform: scale(0.9);
+    }
+}

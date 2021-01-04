@@ -1,0 +1,197 @@
+.contact {
+  height: 900px;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+.contact__outline-div-red {
+  position: absolute;
+  width: 100%;
+  top: -10px;
+  height: 205px;
+  background: #C52346;
+  -webkit-clip-path: polygon(0 92%, 50% 0, 100% 92%, 100% 100%, 50% 8%, 0 100%);
+          clip-path: polygon(0 92%, 50% 0, 100% 92%, 100% 100%, 50% 8%, 0 100%);
+}
+
+.contact__form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 900px;
+  background-color: #1c1d27;
+  -webkit-clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 50% 80%, 0 100%);
+          clip-path: polygon(0 20%, 50% 0, 100% 20%, 100% 100%, 50% 80%, 0 100%);
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 700px;
+  padding-bottom: 150px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__header {
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #C52346;
+  margin-bottom: 20px;
+}
+
+.FormField {
+  width: 30%;
+  margin-bottom: 20px;
+  position: relative;
+  height: 50px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.FormField__message {
+  height: 270px;
+}
+
+.FormField__Input {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.FormField__Input-message {
+  height: 200px;
+  margin-top: 30px;
+  overflow-y: scroll;
+  text-align: left;
+}
+
+.FormField__Label {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #7a7979;
+  font-size: 16px;
+}
+
+.FormField__Label-message {
+  pointer-events: none;
+}
+
+.FormField__Label::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.FormField__title {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.FormField__title-message {
+  height: 200px;
+  padding-top: 182px;
+}
+
+.FormField__Input:focus + .FormField__Label .FormField__title, .FormField__Input:valid + .FormField__Label .FormField__title {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: 14px;
+  color: #ccc8c8;
+}
+
+.FormField__Input:focus + .FormField__Label::after, .FormField__Input:valid + .FormField__Label::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.FormField__Submit-button {
+  margin-top: 10px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #C52346;
+  background: none;
+  color: #C52346;
+  font-size: 20px;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.FormField__Submit-button:hover,
+.FormField__Submit-button:focus {
+  background-color: #C52346;
+  color: #1c1d27;
+}
+
+.contact__outline-div-red2 {
+  position: absolute;
+  width: 100%;
+  top: 719px;
+  height: 181px;
+  background: #C52346;
+  -webkit-clip-path: polygon(50% 0%, 100% 100%, 50% 8%, 0 100%);
+          clip-path: polygon(50% 0%, 100% 100%, 50% 8%, 0 100%);
+  z-index: 0;
+}
+
+.contact__up-arrows {
+  height: 50px;
+  width: 50px;
+  background-color: #C52346;
+  color: black;
+  position: absolute;
+  top: 728px;
+  left: 50%;
+  font-size: 40px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact__up-arrows .arrow2 {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+}
+
+.contact__up-arrows:hover {
+  color: white;
+}
+/*# sourceMappingURL=Contact.css.map */

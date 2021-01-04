@@ -1,0 +1,54 @@
+.admin__projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.adminProjects__existing-projects {
+    margin-left: 20%;
+    width: 100%;
+}
+
+.adminProjects__new-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    height: auto;
+    width: 80%;
+}
+
+/* .projects__new-field img {
+    height:300px;
+    width: 300px;
+} */
+
+.adminProjects__single-existing {
+    margin-bottom: 30px;
+    width:80%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.adminProjects__short-edit-view, .adminProjects__long-edit-view {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+.adminProjects__short-single-item {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.adminProjects__long-edit-view {
+    height: 400px;
+    flex-wrap: wrap;
+}

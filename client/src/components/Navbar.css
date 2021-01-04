@@ -1,0 +1,117 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+    padding: 0;
+    background-color: rgb(28, 29, 39);
+    color: white;
+    text-align: center;
+    z-index: 60;
+}
+
+.navbar-container {
+    position: relative;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-links {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    padding-top: 18px;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+
+.nav-link:hover,
+.nav-link:focus {
+    cursor: pointer;
+    color: #C52346;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 4px solid #C52346;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .nav-links {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 0vh;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links-active {
+        position: relative;
+        top: 250px;
+        background-color: rgb(28, 29, 39);
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: all 0.5s ease;
+    }
+
+    .nav-link {
+        height: 40px;
+        padding-top: 0px;
+    }
+    .nav-link:hover {
+        border-bottom: none;
+    }
+    .menu-icon {
+        display: block;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        right: 32px;
+        transform: translate(0%, 50%);
+        font-size: 28px;
+        cursor: pointer;
+    }
+    
+    .fa-times {
+        height: 1.2em;
+        width: auto;
+    }
+
+}
+/* .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    text-align: center;
+  } */

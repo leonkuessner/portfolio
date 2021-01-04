@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* @font-face {
+    font-family: Raleway;
+    src: url('https://fonts.google.com/specimen/Raleway');
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+}
+
+.body-wrapper {
+    overflow-x: hidden;
+    position: relative;
+}

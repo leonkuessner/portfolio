@@ -1,0 +1,270 @@
+@import '../../styles/hexagon';
+
+@mixin flexCenter($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+};
+
+.aboutMe__horizontal-transition {
+    background: linear-gradient(0deg, white 0%, rgb(22, 174, 225) 50%,#121212 100%);
+    height: 50px;
+    width: 100%;
+}
+
+.aboutMe__container {
+    @include flexCenter(column,center);
+    align-items: unset;
+    perspective: 500px;
+}
+
+.aboutMe__top-container {
+    text-align: center;
+}
+
+.aboutMe__top-top-container {
+    text-transform: uppercase;
+    @include flexCenter(column, center);
+    margin-top: 120px;
+    font-size: 30px;
+    & .aboutMe__header-bar{
+        margin-top: 50px;
+        background-color: rgb(65, 64, 64);
+        height: 5px;
+        width: 80px;
+    }
+}
+
+.aboutMe__top-bottom-container {
+    transform-style: preserve-3d;
+    margin: 50px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    @include flexCenter(row, space-around);
+    flex-wrap: wrap;
+    & .aboutMe__hexagon-container {
+        height: 300px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+        @include flexCenter(column, center);
+        & .aboutMe__hexagon-description {
+            width: 250px;
+            height: 120px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            & .aboutMe__hexagon-header {
+                margin-bottom: 20px;
+                transition: all 0.3s ease;
+            }
+        }
+        & .aboutMe__hexagon {
+            transition: all 0.3s ease;
+            @include hexagon(150);
+            & .about-me-icon{
+            // background-color: blue;
+                height: 100%;
+                width: 150px;
+                font-size: 75px;
+            }
+        }
+    }
+}
+
+.aboutMe__main {
+    @include flexCenter(row, center);
+    padding-bottom: 100px;
+}
+
+
+.aboutMe__left-container {
+    width: 40%;
+    padding-left: 15%;
+    height: 100%;
+    @include flexCenter(column, space-around);
+    text-align: center;
+    // padding-right: 8%;
+}
+.aboutMe__image-container {
+    position: relative;
+    @include flexCenter(row, center);
+    height: 500px;
+    width: 500px;
+}
+
+.aboutMe__hexagon-helper-2 img {
+    position: absolute;
+    top: -100px;
+    left: -400px;
+}
+.aboutMe__img-hexagon {
+    overflow: hidden;
+    visibility: hidden;
+    transform: rotate(120deg);
+}
+.aboutMe__hexagon-helper-1 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-60deg);
+    cursor: default;
+}
+.aboutMe__hexagon-helper-2 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    // background-image: url(images/profile-pic.JPG);
+    visibility: visible;
+    transform: rotate(-60deg);
+}
+
+.hexagon1 {
+    position: absolute;
+    width: 370px;
+    height: 290px;
+    // margin: 0 0 0 -200px;
+}
+
+
+.aboutMe__image-container img {
+    position: absolute;
+    top: -40px;
+    left: -70px;
+}
+
+.aboutMe__text-container{
+    height: 40%;
+    width: 100%;
+    @include flexCenter(column, space-around)
+}
+
+.aboutMe__text-about-me{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    & a {
+        color: rgb(21, 152, 196);
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+
+.aboutMe__right-container {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    @include flexCenter(column, space-around);
+    text-align: center;
+}
+
+.aboutMe__skills__header {
+    margin-bottom: 50px;
+    font-weight: 900;
+}
+
+.aboutMe__skills-container {
+    height: 50%;
+    width: 80%;
+}
+
+.aboutMe__skill-progress {
+    display: flex;
+    height: 40px;
+    margin-top: 20px;
+    z-index: 50;
+}
+
+.aboutMe__skills__name {
+    padding-top: 10px;
+    font-size: 18px;
+    z-index: 51;
+    width: 150px;
+    font-weight: 900;
+    color: #fff;
+    background-color: rgb(22, 174, 225);
+}
+
+.aboutMe__skills__progress-container {
+    background: rgb(197, 197, 197);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.aboutMe__skills__progress-bar {
+    height: 40px;
+    background: linear-gradient(90deg, rgb(19, 144, 185) 0%, rgb(125, 0, 197) 100%);
+    position: absolute;
+    z-index: 1;
+    // transform: translateX(-100%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.aboutMe__skills__percentage {
+    position: absolute;
+    right: 10px;
+    padding-top: 10px;
+    height: 100%;
+    z-index: 55;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1500px) {
+    .aboutMe__top-bottom-container {
+        transform-style: preserve-3d;
+        margin-left: 7%;
+        margin-right: 7%;
+        & .aboutMe__hexagon-description {
+            width: 200px;
+            font-size: 16px;
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .aboutMe__top-bottom-container {
+        transform-style:inherit;
+        margin-left: 15%;
+        margin-right: 15%;
+        & .aboutMe__hexagon-container {
+            margin-top: 40px;
+            margin-left:  45px;
+            margin-right:  45px;
+            & .aboutMe__hexagon-description {
+                width: 200px;
+            
+            }
+        }
+    }
+    .aboutMe__hexagon-desc{
+        font-size: 15px;
+    }
+    .aboutMe__main{
+        @include flexCenter(column, center);
+        & .aboutMe__skills-container{
+            margin-top: 100px;
+        }
+        & .aboutMe__left-container {
+            padding: 0;
+            width: 100%;
+            @include flexCenter(column, space-around);
+            & .aboutMe__text-about-me {
+                text-align: center;
+                width: 60%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 955px) {
+    .aboutMe__top-bottom-container {
+        margin-left: 8%;
+        margin-right: 8%;        
+        & .aboutMe__hexagon-container {
+            margin-top: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}

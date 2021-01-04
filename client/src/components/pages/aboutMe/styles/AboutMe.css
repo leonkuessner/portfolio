@@ -1,0 +1,437 @@
+.aboutMe__horizontal-transition {
+  background: -webkit-gradient(linear, left bottom, left top, from(white), color-stop(50%, #16aee1), to(#121212));
+  background: linear-gradient(0deg, white 0%, #16aee1 50%, #121212 100%);
+  height: 50px;
+  width: 100%;
+}
+
+.aboutMe__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.aboutMe__top-container {
+  text-align: center;
+}
+
+.aboutMe__top-top-container {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 120px;
+  font-size: 30px;
+}
+
+.aboutMe__top-top-container .aboutMe__header-bar {
+  margin-top: 50px;
+  background-color: #414040;
+  height: 5px;
+  width: 80px;
+}
+
+.aboutMe__top-bottom-container {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin: 50px 0;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container {
+  height: 300px;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon-description {
+  width: 250px;
+  height: 120px;
+  margin-top: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon-description .aboutMe__hexagon-header {
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  background-color: #16aee1;
+  width: 150;
+  height: 86.055px;
+  margin: 43.3005px;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon::after, .aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon::before {
+  bottom: 100%;
+  border-bottom: 43.3005px solid #16aee1;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon::after {
+  top: 100%;
+  width: 0;
+  border-top: 43.3005px solid #16aee1;
+}
+
+.aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon .about-me-icon {
+  height: 100%;
+  width: 150px;
+  font-size: 75px;
+}
+
+.aboutMe__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 100px;
+}
+
+.aboutMe__left-container {
+  width: 40%;
+  padding-left: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.aboutMe__image-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  width: 500px;
+}
+
+.aboutMe__hexagon-helper-2 img {
+  position: absolute;
+  top: -100px;
+  left: -400px;
+}
+
+.aboutMe__img-hexagon {
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.aboutMe__hexagon-helper-1 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+  cursor: default;
+}
+
+.aboutMe__hexagon-helper-2 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.hexagon1 {
+  position: absolute;
+  width: 370px;
+  height: 290px;
+}
+
+.aboutMe__image-container img {
+  position: absolute;
+  top: -40px;
+  left: -70px;
+}
+
+.aboutMe__text-container {
+  height: 40%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutMe__text-about-me {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.aboutMe__text-about-me a {
+  color: #1598c4;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.aboutMe__right-container {
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.aboutMe__skills__header {
+  margin-bottom: 50px;
+  font-weight: 900;
+}
+
+.aboutMe__skills-container {
+  height: 50%;
+  width: 80%;
+}
+
+.aboutMe__skill-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  margin-top: 20px;
+  z-index: 50;
+}
+
+.aboutMe__skills__name {
+  padding-top: 10px;
+  font-size: 18px;
+  z-index: 51;
+  width: 150px;
+  font-weight: 900;
+  color: #fff;
+  background-color: #16aee1;
+}
+
+.aboutMe__skills__progress-container {
+  background: #c5c5c5;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutMe__skills__progress-bar {
+  height: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#1390b9), to(#7d00c5));
+  background: linear-gradient(90deg, #1390b9 0%, #7d00c5 100%);
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.aboutMe__skills__percentage {
+  position: absolute;
+  right: 10px;
+  padding-top: 10px;
+  height: 100%;
+  z-index: 55;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1500px) {
+  .aboutMe__top-bottom-container {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  .aboutMe__top-bottom-container .aboutMe__hexagon-description {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .aboutMe__top-bottom-container {
+    -webkit-transform-style: inherit;
+            transform-style: inherit;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .aboutMe__top-bottom-container .aboutMe__hexagon-container {
+    margin-top: 40px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  .aboutMe__top-bottom-container .aboutMe__hexagon-container .aboutMe__hexagon-description {
+    width: 200px;
+  }
+  .aboutMe__hexagon-desc {
+    font-size: 15px;
+  }
+  .aboutMe__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutMe__main .aboutMe__skills-container {
+    margin-top: 100px;
+  }
+  .aboutMe__main .aboutMe__left-container {
+    padding: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutMe__main .aboutMe__left-container .aboutMe__text-about-me {
+    text-align: center;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .aboutMe__top-bottom-container {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+  .aboutMe__top-bottom-container .aboutMe__hexagon-container {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+/*# sourceMappingURL=AboutMe.css.map */

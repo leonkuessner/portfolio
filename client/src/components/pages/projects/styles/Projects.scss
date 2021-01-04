@@ -1,0 +1,164 @@
+@mixin flexCenter($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+};
+
+
+
+.projects {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 250px;
+}
+
+.projects__top-container {
+    // position: absolute;
+    text-transform: uppercase;
+    @include flexCenter(column, center);
+    padding-top: 120px;
+    font-size: 30px;
+    & .projects__header-bar{
+        margin-top: 50px;
+        background-color: rgb(131, 131, 131);
+        height: 5px;
+        width: 80px;
+    }
+}
+.projects__bottom-container {
+    @include flexCenter(column, space-around);
+    width: 100%;
+        
+    & .projects__bottom-popup-container {
+        position: fixed;
+        top: 5%;
+        left: 20%;
+        padding: 3% 10%;
+        background-color:rgb(243, 243, 243);
+        height: 90%;
+        width: 60%;
+        z-index: 66;
+        overflow-y: scroll;
+        & svg {
+            color: rgb(68, 68, 68);
+            position: fixed;
+            top: 7%;
+            right: 22%;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        & .sliderImg {
+            width: 100%;
+        }
+        & .slick-prev:before, .slick-next:before {
+            color: black;
+        }
+        & .projects__slide-description {
+            @include flexCenter(column, space-around);
+            margin-top: 60px;
+            & .projects__slide-header {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.projects__overlay {
+    position: fixed;
+    z-index: 65;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 44, 44, 0.756);
+}
+
+.projects__all-projects-container {
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 10%;
+    @include flexCenter(row,center);
+    flex-wrap: wrap;
+    & .projects__single-project-container {
+        position: relative;
+        transition: all 0.1s ease-in;
+        background-color: black;
+        overflow: hidden;
+        height: 400px;
+        width: 400px;
+        @include flexCenter(column, center);
+        cursor: pointer;
+        z-index: 0;
+        & img {
+            height: 400px;
+            width: auto;
+            pointer-events: none;
+        }
+        & .projects__single-project-desc1  {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: scale(0.1);
+            transition: all 0.3s ease-in;
+            height: 400px;
+            width: 400px;
+            & .projects__single-project-desc  {
+                @include flexCenter(column, center );
+                cursor: default;
+                color: rgb(22, 174, 225);
+                position: relative;
+                height: 100%;
+                & h1{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 30px;
+                    color: black;
+                }
+                & h3 {
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 80px;
+                    font-size: 20px;
+                }
+                & button {
+                    width: 200px;
+                    height: 50px;
+                    border: 2px solid rgb(22, 174, 225);
+                    background-color: transparent;
+                    color: rgb(25, 200, 209);
+                    font-size: 20px;
+                    font-weight: 600;
+                    outline: none;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                & button:hover {
+                    background-color: rgb(22, 174, 225);
+                    color: #fff;
+                    width: 220px;
+                }
+            }
+        }
+    }
+    & .projects__single-project-container:hover {
+        transform: scale(1);
+        z-index: 1;
+    }
+    & .projects__single-project-container:hover > .projects__single-project-desc1 {
+        transform: scale(1);
+        // @include flexCenter(column, center );
+        z-index: 1;
+        background-color: rgb(243, 243, 243);
+    }
+    
+}
+
+
+@media screen and (max-width: 1000px) {
+    .projects__all-projects-container {
+        @include flexCenter(column,center )
+    }
+}

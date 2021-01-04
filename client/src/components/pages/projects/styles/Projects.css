@@ -1,0 +1,258 @@
+.projects {
+  background-color: #f3f3f3;
+  padding-bottom: 250px;
+}
+
+.projects__top-container {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 120px;
+  font-size: 30px;
+}
+
+.projects__top-container .projects__header-bar {
+  margin-top: 50px;
+  background-color: #838383;
+  height: 5px;
+  width: 80px;
+}
+
+.projects__bottom-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.projects__bottom-container .projects__bottom-popup-container {
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  padding: 3% 10%;
+  background-color: #f3f3f3;
+  height: 90%;
+  width: 60%;
+  z-index: 66;
+  overflow-y: scroll;
+}
+
+.projects__bottom-container .projects__bottom-popup-container svg {
+  color: #444444;
+  position: fixed;
+  top: 7%;
+  right: 22%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.projects__bottom-container .projects__bottom-popup-container .sliderImg {
+  width: 100%;
+}
+
+.projects__bottom-container .projects__bottom-popup-container .slick-prev:before, .projects__bottom-container .projects__bottom-popup-container .slick-next:before {
+  color: black;
+}
+
+.projects__bottom-container .projects__bottom-popup-container .projects__slide-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 60px;
+}
+
+.projects__bottom-container .projects__bottom-popup-container .projects__slide-description .projects__slide-header {
+  margin-bottom: 30px;
+}
+
+.projects__overlay {
+  position: fixed;
+  z-index: 65;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(44, 44, 44, 0.756);
+}
+
+.projects__all-projects-container {
+  margin-top: 100px;
+  width: 100%;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects__all-projects-container .projects__single-project-container {
+  position: relative;
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  background-color: black;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.projects__all-projects-container .projects__single-project-container img {
+  height: 400px;
+  width: auto;
+  pointer-events: none;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  height: 400px;
+  width: 400px;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 .projects__single-project-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+  color: #16aee1;
+  position: relative;
+  height: 100%;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 .projects__single-project-desc h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30px;
+  color: black;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 .projects__single-project-desc h3 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 80px;
+  font-size: 20px;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 .projects__single-project-desc button {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #16aee1;
+  background-color: transparent;
+  color: #19c8d1;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.projects__all-projects-container .projects__single-project-container .projects__single-project-desc1 .projects__single-project-desc button:hover {
+  background-color: #16aee1;
+  color: #fff;
+  width: 220px;
+}
+
+.projects__all-projects-container .projects__single-project-container:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 1;
+}
+
+.projects__all-projects-container .projects__single-project-container:hover > .projects__single-project-desc1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: 1;
+  background-color: #f3f3f3;
+}
+
+@media screen and (max-width: 1000px) {
+  .projects__all-projects-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=Projects.css.map */
