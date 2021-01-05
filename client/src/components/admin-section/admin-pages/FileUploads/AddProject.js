@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './AddProjectsStyles/AddProjects.css'
 import axios from 'axios'
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
 // import {getExistingProjects} from './ProjectEdit'
 
 
@@ -193,6 +195,21 @@ function Addproject() {
                                     </div>
                                     )
                                 }) 
+                                
+                            : null}
+                        </div>
+                        <div className="addProject__slideshow">
+                            {uploadedSlideshow ?
+                                <Slide easing="ease">
+                                    {uploadedSlideshow.map((slide, key) =>{ 
+                                        return(
+                                        <div className="each-slide" key={key}>
+                                            <img style={{height: "200px", width: "300px"}} src={slide}/>
+                                        </div>
+                                        )
+                                    })}
+                                </Slide> 
+                                
                             : null}
                         </div>
                     </div>
