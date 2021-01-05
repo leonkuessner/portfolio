@@ -1,0 +1,38 @@
+.editProjects {
+    width: 80%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectEdit__single-item {
+    width: 90%;
+}
+.projectEdit__slideshow-div {
+    width: 400px;
+    align-content: center;
+}
+.images-wrap > div {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.each-slide {
+    margin: 0;
+    height: 200px;
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.projectEdit__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

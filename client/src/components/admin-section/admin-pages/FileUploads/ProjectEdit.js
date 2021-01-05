@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-// import './styles/Projects.css'
+import './ProjectEditStyles/ProjectEdit.css'
 import axios from 'axios'
-// import ProjectsFileUpload from './FileUploads/ProjectsFileUpload'
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
+
 
 // export const getExistingProjects = () => {
 //     axios.get("http://localhost:5000/getExisting").then((response) =>{
@@ -17,7 +19,6 @@ function ProjectEdit() {
     const getExistingProjects = () => {
         axios.get("http://localhost:5000/getExisting").then((response) =>{
             setExistingProjects(response.data)
-            console.log(response.data)
         })
     }
     const deleteItem = (id) => {
@@ -39,7 +40,7 @@ function ProjectEdit() {
     }, [])
 
     return (
-        <div>
+        <div className="editProjects">
             <button onClick={uploadExisting}>Get Projects</button>
             {existingProjects ? existingProjects.map((project, key) => (
                 <div key={key} className="projectEdit__single-item">
@@ -47,7 +48,21 @@ function ProjectEdit() {
                     <h3>{project.title}</h3>
                     <h3>{project.languages}</h3>
                     <h3>{project.description}</h3>
-                    <img src={project.thumbnailPath} style={{height:"200px"}}/>
+                    <div className="projectEdit__images">
+                        <img src={project.thumbnailPath} style={{height:"200px"}}/>
+                        <div className="projectEdit__slideshow-div">
+                            <Slide easing="ease">
+                                {project.links.map((link, key) => {
+                                    console.log(link)
+                                    return(
+                                        <div className="each-slide" key={key}>
+                                            <img style={{height: "200px", width: "300px"}} src={link}/>
+                                        </div>
+                                    )
+                                })}
+                            </Slide>
+                        </div>
+                    </div>
                 </div>
             )): null}
         </div>

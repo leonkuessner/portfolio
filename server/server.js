@@ -19,20 +19,21 @@ const db = mysql.createConnection({
 
 app.get('/getExisting', (req, res) => {
     db.query(
-        `SELECT projectdata.id, title, languages, description, thumbnailPath, group_concat(link) FROM projectdata INNER JOIN slideshowarrays ON projectdata.id = slideshowarrays.project_id GROUP BY id`,
+        // `SELECT projectdata.id, title, languages, description, thumbnailPath, link FROM projectdata INNER JOIN slideshowarrays ON projectdata.id = slideshowarrays.project_id GROUP BY id`,
+        'SELECT projectdata.id, title, languages, description, thumbnailPath, group_concat(link) as links FROM projectdata INNER JOIN slideshowarrays ON projectdata.id = slideshowarrays.project_id GROUP BY id',
         (err, result) => {
             if (err) {
                     console.log(err)
                 } else {
-                    console.log(result)           // Send Result
+                    result.map(project => {
+                        project.links = project.links.split(",")
+                        
+                        // project.links = `[${project.links.replace(/[,]+/g, '')}]`
+                    })
+                    console.log(result)
+                    res.send(result)
                 }
         }
-        // 'SELECT * FROM projectdata', (err, result) => {              // employees being the name of the TABLE!
-        // if (err) {
-        //     console.log(err)
-        // } else {
-        //     res.send(result)            // Send Result
-        // }
     )
 })
 app.post('/deleteItem', (req, res) => {
@@ -40,6 +41,10 @@ app.post('/deleteItem', (req, res) => {
     console.log(req.body.item)
     db.query(
         'DELETE FROM `projectdata` WHERE `id`=?',
+        [id]
+    );
+    db.query(
+        'DELETE FROM `slideshowarrays` WHERE `project_id`=?',
         [id]
     );
     db.query(
